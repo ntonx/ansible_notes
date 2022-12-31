@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  remote_user: test
+  become : true
+  tasks:
+    - name: Install apache2
+      apt: name=apache2 state=present update_cache=true
+      notify:
+        - "Restart server"
+  handlers:
+    - name: Restart server
+      service: name=apache2 state=restarted

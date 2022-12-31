@@ -1,0 +1,16 @@
+#hosts: webservers
+#hosts: IP
+#become : true is used to execute superroot commands
+- hosts: all
+  tasks:
+    - name: Vim version verification
+      shell: vim --version
+    - name: Install VIM
+      apt: name=vim state=present
+      become: true
+#    - name: Start a service
+#      service: name=nginx state=stopped
+#      become: true
+#    - name: Start a service
+#      service: name=nginx state=started
+#      become: true
