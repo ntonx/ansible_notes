@@ -1,0 +1,4 @@
+[database]
+172.17.0.3    ansible_pass=test ansible_user=test
+[web]
+172.17.0.4    ansible_pass=test ansible_user=test

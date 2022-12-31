@@ -8,3 +8,25 @@ Deploy a ubuntu server with this command
 docker run --rm -d --name server1 server:ansible tail -f /dev/null
 docker run --rm -d --name server2 server:ansible tail -f /dev/null
 ```
+
+##### Commands to execute on server1 and server2
+These commands allow execute a ssh client on these servers.
+
+Access to servers and execute:
+```yaml
+#docker exec -it server1 bash
+#apt-get update && apt-get install -y nano
+#nano /etc/ssh/sshd_config
+```
+On this file, change this line:
+```
+#PermitRootLogin prohibit-password
+```
+to:
+```
+PermitRootLogin yes
+```
+Restart service using command:
+```
+#service ssh restart
+```
