@@ -2,7 +2,9 @@
 
 
 Execute this command on console:
-`# docker run -d --name master1 ubuntu:latest tail -f /dev/null`
+```
+# docker run -d --name master1 ubuntu:latest tail -f /dev/null
+```
 
 #### 1. Commands to create servers
 Run the following commands to create the servers to be managed (see /example1/README.md and complete all commands described in this file).
