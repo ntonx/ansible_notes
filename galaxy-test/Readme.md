@@ -157,3 +157,16 @@ server2# apt install curl
 server2# curl localhost:80
 ```
 In this case, we can not access from other containers because port 80 is not expose when we created server2.
+
+---
+### **List roles and collections installed using ansible-galaxy**
+
+To list which role and collection has been installed on a certain directory access to directory an execute this command:
+
+```
+# cd galaxy-test
+# ansible-galaxy role list
+# ansible-galaxy collection list
+```
+
+We access to galaxy-test/ folder because in this folder was execute ansible-galaxy commands. For more details about roles and collection, the scripts used to defined them are store in cd ``~/.ansible/`` folder.
