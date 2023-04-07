@@ -2,7 +2,14 @@
 
 ```
 docker build -t server:ansible .
+
+#### Command to execute in order to scan vulnerabilities on docker images
 ```
+docker scan --dependency-tree server:ansible
+docker scan name:version
+```
+
+
 Deploy a ubuntu server with this command
 ```
 docker run --rm -d --name server1 server:ansible tail -f /dev/null

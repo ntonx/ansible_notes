@@ -1,4 +1,8 @@
-FROM ubuntu:latest
+# this line was commented due to scan gave vulnerabilities> docker scan nameImage:version
+#FROM ubuntu:latest
+
+# this base image was used to verify scan funcionality on Docker, if there is a problem to execute commands on README, use ubuntu:latest image
+FROM ubuntu:20.04
 RUN apt update && apt install  openssh-server sudo -y
 RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1000 test 
 RUN  echo 'test:test' | chpasswd
